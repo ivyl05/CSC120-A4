@@ -1,5 +1,8 @@
 # CSC120-A4: Chugging Along
 
+public privatE
+all     local   
+
 ## Outline
 In this assignment, we'll explore **Encapsulation** by building a virtual Train!
 
