@@ -45,7 +45,8 @@ public class Train {
      */
     public Car getCar(int i) {
         if (i<1 || i > this.cars.size()){
-            throw new IndexOutOfBoundsException("Car index" + i +" is out of range." + "Valid range is 1 to" + this.cars.size() + ".");
+            throw new IndexOutOfBoundsException("Car index" + i +" is out of range." 
+            + "Valid range is 1 to" + this.cars.size() + ".");
         }
         return this.cars.get(i-1);
     }
