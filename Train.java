@@ -33,7 +33,7 @@ public class Train {
      * @return the engine
      */
     public Engine getEngine() {
-        return engine;
+        return this.engine;
     }
 
     /**
@@ -44,10 +44,10 @@ public class Train {
      * @throws IndexOutOfBoundsException if the index is not in the range.
      */
     public Car getCar(int i) {
-        if (i<1 || i > cars.size()){
-            throw new IndexOutOfBoundsException("Car index" + i +" is out of range." + "Valid range is 1 to" + cars.size() + ".");
+        if (i<1 || i > this.cars.size()){
+            throw new IndexOutOfBoundsException("Car index" + i +" is out of range." + "Valid range is 1 to" + this.cars.size() + ".");
         }
-        return cars.get(i-1);
+        return this.cars.get(i-1);
     }
 
     /**
@@ -58,7 +58,7 @@ public class Train {
     public int getMaxCapacity() {
         int maxx = 0;
         for (int i = 0; i < cars.size(); i++) {
-            maxx = Math.max(maxx, cars.get(i).getCapacity());
+            maxx = Math.max(maxx, this.cars.get(i).getCapacity());
         }
         return maxx;
     }
@@ -70,8 +70,8 @@ public class Train {
      */
     public int seatsRemaining() {
         int sum = 0;
-        for (int i = 0; i < cars.size(); i++) {
-            sum += cars.get(i).seatsRemaining();
+        for (int i = 0; i < this.cars.size(); i++) {
+            sum += this.cars.get(i).seatsRemaining();
         }
         return sum;
     }
@@ -80,8 +80,8 @@ public class Train {
      * This method prints out the passengers on each car of the train. 
      */
     public void printManifest() {
-        for (int i = 0; i < cars.size(); i++) {
-            cars.get(i).printManifest();
+        for (int i = 0; i < this.cars.size(); i++) {
+            this.cars.get(i).printManifest();
         }
     }
 }

@@ -43,9 +43,9 @@ public class Engine {
      * @return true if there is sufficient fuel and the operation is successful; false if there is not enough fuel.
      */
     public boolean go(double goFuel) {
-        if (currentFuel >= goFuel) {
+        if (this.currentFuel >= goFuel) {
             this.currentFuel -= goFuel;
-            System.out.println("Remaining Fuel Level is: " + currentFuel + ".");
+            System.out.println("Remaining Fuel Level is: " + this.currentFuel + ".");
             return true;
         } else {
             System.out.println("Fuel level is too low!");
